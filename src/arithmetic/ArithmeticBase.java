@@ -12,10 +12,17 @@ import java.util.Scanner;
  * change the code to use enum instead String and mention the advantage of enum.
  * @author sivagamasrinivasan
  * 
+ * advantage of using enum is it will reduce dependency on another class.
+ * using enum it will become loose coupling.
  */
 public class ArithmeticBase 
 {
- public double x,y;
+    private ArithmeticBase op;
+    /**
+     *
+     */
+    public enum op{"Plus","Minus","Times","Divide"};
+    public double x,y;
     double calculate(double x, double y) 
         {
         Scanner sc =new Scanner(System.in);
